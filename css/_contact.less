@@ -1,0 +1,72 @@
+.contact{
+    font-family: "Open Sans";
+
+    &__header{
+        .section__header(#000000);
+        margin-bottom: 0;
+    }
+
+    &__text{
+        .section__text;
+        padding-bottom: 80px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__form{
+        font-weight: 500;
+        position: relative;
+        font-size: 14px;
+        color: #636363;
+        line-height: 1.714;
+        margin-bottom: 150px;
+        
+        span b{
+            color: #db0000;
+        }
+
+        label input,textarea{
+            border: 1px solid #999999;
+            border-radius: 3px;
+        }
+        label p{
+            margin-top: 5px;
+        }
+    }
+
+    &__name{
+        width: 100%;
+        height:40px;
+    }
+
+    &__email{
+        height: 40px;
+        width: 100%;
+    }
+
+    &__message{
+        width: 100%;
+        min-height: 160px;
+    }
+
+    &__button{
+        position: absolute;
+        bottom: -50px;
+        right: 30px;
+        padding: 10px 60px;
+        font-weight: 600;
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+        line-height: 1.5;
+        text-transform: uppercase;
+        background-color: #fcac45;
+        border: none;
+        cursor: pointer;
+    }
+
+    @media (max-width: 992px) {
+        &__form{
+            text-align: center;
+        }
+    }
+}

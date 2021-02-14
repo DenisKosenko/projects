@@ -1,0 +1,42 @@
+
+.footer{
+    font-family: "Open Sans";
+    background-color: #222222;
+
+    &__list{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__social{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__text{
+        font-size: 12px;
+        color: rgb(178, 178, 178);
+        line-height: 4.5;
+        text-transform: uppercase;
+    }
+
+    &__network{
+        padding-left: 0px;
+    }
+
+    @media (max-width: 768px) {
+        &__list{
+            padding-left: 5%;
+        }
+
+        &__social{
+            display: flex;
+            justify-content: flex-start;
+        }
+        &__text{
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+}
+

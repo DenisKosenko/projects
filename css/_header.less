@@ -1,0 +1,111 @@
+@colorblack:#111111;
+@colorwhite:#ffffff;
+@colororange:#fcac45;
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 55px 0;
+    height: 100vh;
+    background-color: @colorblack;
+    color: @colorwhite;
+    font-family: 'Open Sans';
+
+    &__nav{
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.714;
+
+        &_right{
+            list-style-type: none;
+            padding-left: 75px;
+            padding-right: 0;
+            
+            .header__link a{
+                text-decoration: none;
+                color: @colorwhite;
+                position: relative;
+            }
+            
+            .header__link a::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                margin-left: -29px;
+                bottom: -20px;
+                height: 3px;
+                width: 0;
+                background: linear-gradient(to right, #292929 50%, @colororange 50%);
+                transition-duration: 0.5s;
+                animation-direction: alternate;
+            }
+
+            .header__link:hover a::after{
+                left: 50%;
+                width: 60px;
+                transition-duration: 1.5s;
+                transition-property:width,left ;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            &_left{
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            &_right{
+                display: flex;
+                justify-content: center;
+                margin-left: -35px;
+                padding-top: 15px;
+                li{
+                    padding-bottom: 15px;
+                }
+            }
+            .header__link a::after{
+                bottom: -12px;
+            }
+        }
+    }
+
+    &__banner{
+        text-align: center;
+        
+        &_huge{
+            font-family: 'Open Sans';
+            font-weight: 300;
+            font-size: 44px;
+            color: rgb(153, 153, 153);
+            text-transform: uppercase;
+            letter-spacing: -3px;
+        }
+
+        &_normal{
+            font-weight: 300;
+            padding-top: 5px;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.749);
+            line-height: 1.2;
+        }
+        @media (max-width: 768px) {
+            &_normal{
+                font-size: 18px;
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+            &_huge{
+                font-size: 40px;
+            }
+        }
+    }
+
+    &__scroll{
+        cursor: pointer;
+        text-align: center;
+    }
+}
+
